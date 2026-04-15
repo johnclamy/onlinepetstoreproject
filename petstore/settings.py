@@ -30,6 +30,10 @@ INSTALLED_APPS = [
     'theme',
 ]
 
+
+TAILWIND_APP_NAME = 'theme'
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
