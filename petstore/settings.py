@@ -122,3 +122,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Enable the use of static assets by locating the folder that contains them
+
+STATICFILES_DIRS = [ BASE_DIR / 'petstore/static/' ] 
