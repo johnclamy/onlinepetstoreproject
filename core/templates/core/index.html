@@ -1,4 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 class="text-3xl font-bold text-green-600">Welcome to Pets-R-Us!</h1>
+{% load static %}
+<!-- Hero section -->
+    <section class="flex flex-col-reverse justify-center md:flex-row p-6 items-center gap-8 mb-12">
+        <article class="md:w-1/2">
+            <h2 class="max-w-md text-4xl mt-4 font-bold text-center sm:text-5xl text-slate-900 dark:text-white">
+                Welcome to <span class="text-red-300"><br />
+                Pets</span>-<span class="text-blue-300">R</span>-<span class="text-green-300">Us</span>
+            </h2>
+            <p class="max-w-md text-lg md:text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-gray-400">
+                Your one-stop shop for all your pet needs!
+            </p>
+            <p class="max-w-md text-lg md:text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-gray-400">
+                We offer a wide <a href="#" class="text-[#457B9D] hover:text-[#1D3557]">variety of pets</a>, from dogs and cats to birds and reptiles. We also have a large selection of pet supplies, including <a href="#" class="text-[#457B9D] hover:text-[#1D3557]">food, toys, and accessories</a>. Whether you're looking for a new furry friend or just want to spoil your current pet, we've got you covered!
+            </p>
+        </article>
+        <img src="{% static 'img/hero.png' %}" alt="Pack of furry friends" class="md:w-1/2" width="350" />
+    </section>
+    <hr class="border-4 mx-auto bg-black dark:bg-white w-1/2">
+
 {% endblock content %}
