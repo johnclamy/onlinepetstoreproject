@@ -8,3 +8,11 @@ def index(request: HttpRequest) -> HttpResponse:
     }
 
     return render(request, 'core/index.html', context)
+
+
+def about(request: HttpRequest) -> HttpResponse:
+    context = {
+        'title': 'Pets-R-Us! | About Us'
+    }
+
+    return render(request, 'core/about.html', context)
