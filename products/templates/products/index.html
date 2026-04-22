@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+    <article class="mb-16 mt-8 px-4">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Products</h2>        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {% for product in products %}
+                <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <header>
+                        <img src="{{ product.image_url }}" alt="{{ product.name }}" class="w-full h-48 object-cover">
+                    </header>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">{{ product.breed }}</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">{{ product.descr }}</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-[#1D3557] dark:text-white">£{{ product.price|floatformat:2 }}</span>
+                            <span class="text-[#457B9D] text-lg font-light">{{ product.name }}</span>
+                        </div>
+                        <a href="#" class="block w-full text-center bg-[#1D3557] text-white py-2 rounded-lg hover:bg-[#457B9D] transition-colors duration-300">View Details</a>                       
+                    </div>                    
+                </section>
+            {% endfor %}
+
+        </div>
+    </article>
+{% endblock %}
