@@ -39,10 +39,10 @@ products = [
 ]
 
 
-def product_list(request: HttpRequest) -> HttpResponse:
+def index(request: HttpRequest) -> HttpResponse:
     context = {
         'title': 'Pets-R-Us | Products page',
         'products': products,
     }
 
-    return render(request, 'products/product-list.html', context)
+    return render(request, 'products/index.html', context)
